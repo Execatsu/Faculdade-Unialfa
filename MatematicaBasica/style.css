@@ -1,0 +1,139 @@
+html {
+    --primary-bg: #111;
+    --primary-cl: #ddd;
+
+    --secundary-bg: #333;
+
+    --rgb-gradient: linear-gradient(45deg, rgba(255,0,0) 0%, rgba(255,255,0)20%, rgba(0,255,0) 40%, rgba(0,255,225) 60%, rgba(0,0,255) 80%, rgba(255,0,255) 100%);
+}
+
+*, h1 {
+    font-family: sans-serif;
+}
+
+select, input, textarea {
+    background: var(--secundary-bg);
+    color: var(--primary-cl);
+    border: .1px solid #888;
+    border-radius: 2px;
+}
+
+
+.screen {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background: var(--primary-bg);
+
+    color: var(--primary-cl);
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: bold;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    background: var(--rgb-gradient);
+    width: 100%;
+    bottom: -1px;
+    height: 2px;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background: var(--secundary-bg);
+}
+
+.main-sect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: var(--primary-bg);
+    color: var(--primary-cl);
+    padding: 10px;
+    min-height: 200px;
+    min-width: 200px;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+    
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, rgba(255,0,0) 0%, rgba(255,255,0)20%, rgba(0,255,0) 40%, rgba(0,255,225) 60%, rgba(0,0,255) 80%, rgba(255,0,255) 100%) 1;
+    border-radius: 10px;
+}
+
+.container > section > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+#result-camp {
+    width: calc(100% - 5px);
+}
+
+button {
+    background: var(--secundary-bg);
+    color: var(--primary-cl);
+    border: .1px solid #888;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.disabled {
+    display: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    padding: 3px;
+    text-transform: uppercase;
+    font-size: .7em;
+    text-shadow: 0 0 3px black;
+    color: var(--primary-cl);
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.text-label {
+    text-transform: uppercase;
+    font-size: .8em;
+    padding-bottom: 3px;
+}
+
+.text-label2 {
+    text-transform: uppercase;
+    font-size: .7em;
+    padding: 5px 0 2px 0;
+}
